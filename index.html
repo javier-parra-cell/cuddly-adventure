@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo en Colombia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explora Colombia</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#itinerario">Itinerario</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+
+        <h2>Descubre los mejores destinos turísticos de Colombia</h2>
+        <p>Desde playas paradisíacas hasta montañas majestuosas.</p>
+        
+        <a href="#destinos" class="btn">Ver destinos</a>
+        
+    </section>
+   
+    <section id="destinos">
+        <h2 class="subtitulo">Busca tu destino</h2>
+        <form id="search-form">
+            <input type="text" id="search" placeholder="Escribe una ciudad o lugar"required>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="destino-list">
+            <!-- Los destinos aparecerán aquí -->
+        </div>
+    </section>
+
+    <section id="itinerario">
+        <h2 class="subtitulo">Genera tu Itinerario</h2>
+        <form id="itinerary-form">
+            <label for="fecha">Selecciona una fecha:</label>
+            <input type="date" id="fecha" required>
+            <button type="submit">Generar</button>
+        </form>
+        <div id="itinerario-result"></div>
+        
+    </section>
+
+    <section id="mapa">
+        <h2 class="subtitulo">Mapa Interactivo</h2>
+        <div id="map"></div>
+       
+    </section>
+    
+    <footer>
+        <a href="#"><p>© 2024 Turismo en Colombia. Todos los derechos reservados.</p></a>
+    </footer>
+      
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
